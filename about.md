@@ -70,7 +70,7 @@ permalink: /about/
 
 3. **2017中国大学生服务外包大赛——智能医疗，海马体分割，一个水到不能再水的比赛，连总结的意义都没有**
 
-    第二赛季排名：231/5204。[团队大腿主页](https://hadxu.github.io/)
+    第二赛季排名：231/5204。
 
 2.  **天池精准医疗大赛——人工智能辅助糖尿病遗传风险预测**
 
@@ -78,14 +78,14 @@ permalink: /about/
 
 1. **内蒙古自治区ACM一等奖**
     
-    踩着毕业的尾巴，跟小伙伴打的。费脑。
+    踩着毕业的尾巴，跟小伙伴打的，费脑。
 
 
 ---
     实习经历
 
 
-1.**无**。
+1.**无**
 
 
 
@@ -123,13 +123,13 @@ permalink: /about/
 ---
     联系方式
 
-Github:[@zhpmatrix](https://github.com/zhpmatrix/)
+Github:[@Vipermdl](https://github.com/Vipermdl/)
 
 Mail:mdl.viper@gmail.com
 
 QQ: 827324873
 
-WeChat: viper
+WeChat: Viper
 
 ---
 
