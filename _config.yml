@@ -1,0 +1,19 @@
+#Site settings
+title: DONGLIANG MA'S blog
+email: 
+description: "A master in computer science"
+baseurl: ""
+
+url: "http://Vipermdl.github.io"
+github_username:  Vipermdl
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
