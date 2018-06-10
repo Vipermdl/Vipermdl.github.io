@@ -1,9 +1,8 @@
 ---
 layout: post
-comments: true
-title:  "[Detection]关于yolov2和ssd框架详细比较"
-excerpt: "针对one-stage做进一步比较"
-date:   2018-06-05 16:35:00
+title: "[Detection]关于yolov2和ssd框架详细比较"
+excerpt: "围绕Faster rcnn、SSD、yolo进行讨论，对目标检测方向one-stage\two-stage方向做简要总结。"
+date: 2018-06-05 16:35:00
 mathjax: true
 ---
 

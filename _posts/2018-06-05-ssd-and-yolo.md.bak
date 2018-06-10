@@ -3,7 +3,7 @@ layout: post
 comments: true
 title:  "[Detection]关于yolov2和ssd框架详细比较"
 excerpt: "针对one-stage做进一步比较"
-date:   2018-06-10 16:35:00
+date:   2018-06-05 16:35:00
 mathjax: true
 ---
 
