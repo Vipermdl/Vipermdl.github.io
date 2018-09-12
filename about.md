@@ -85,33 +85,15 @@ permalink: /about/
 ---
 	组会/讲课/TALK
 
-14.[研讨班-高级计算机视觉应用](cellar/Application_Of_Computer_Vision.pdf)
+5.[组会-Feature selection](cellar/Ensemble.pdf)
 
-13.[组会-分类指标之间关系讨论](cellar/Metric-4-Classification.pdf)
+4.[讲课-Ensemble](cellar/Ensemble.pdf)
 
-12.[组会-分布式机器学习-同步/异步/拓扑](cellar/distributed.pdf)
+3.[讲课-transfer](cellar/transfer.pdf)
 
-11.[算法编程讨论班-第二次讨论(动态规划)](cellar/leetcode_1.pdf)
+2.[研讨班-Domain-Adaptive for detection](cellar/Domain-Adaptive.pdf)
 
-10.[算法编程讨论班-比赛那些事儿](cellar/leetcode_0.pdf)
-
-9.[组会-Dive into XGBoost](cellar/Dive_into_XGBoost.pdf)
-
-8.[组会-关于Mobile Learning的想法讨论](cellar/IDEA.pdf)	
-
-7.[组会-从Newton到L-BFGS](cellar/lbfgs.pdf)
-
-6.[组会-学习领域的几个优化问题](cellar/Optimization_Algs_For_Learning.pdf)
-
-5.[讲课-Introduction to Algorithms](cellar/Algorithm-Framework.pdf)
-
-4.[讲课-DataStructure-LinkList](cellar/DataStructure_Lesson_1.pdf)
-
-3.[讲课-Proof of BST](cellar/二叉树性质证明.pdf)
-
-2.[讲课-Struct and Class](cellar/struct-class-slides.pdf)
-
-1.[讲课-Greedy Algorithm](cellar/greedy-alg.pdf)
+1.[研讨班-two-stage objecte detection review](cellar/two-stage.pdf)
 
 ---
     联系方式
