@@ -35,7 +35,6 @@ permalink: /about/
 
 8.[BreezeDeus](https://breezedeus.github.io/)博客内容很少，干货很多。
 
-9.以上内容都是抄袭我师兄张海鹏同学的博客内容，如需找他，请出门[左拐](https://zhpmatrix.github.io/)
 
     简介
 
@@ -50,17 +49,13 @@ permalink: /about/
 - 2017年入学江南大学(_211,985平台高校_)，读硕，师从[孙俊](http://iot.jiangnan.edu.cn/info/1059/1639.htm)教授。
 
 - 读Paper，逛论坛，还有最爱的吹逼。
-
----
-    参与项目
-
-1.  **无**
-    
-    等我觉得拿得出手了，我再告诉你....
     
 ---
     比赛经历
 
+4. **天池比赛 — 2018广东工业智造大数据创新大赛—智能算法赛**
+
+    7/2972, 未完赛。
 
 3. **2017中国大学生服务外包大赛——智能医疗——海马体分割**
 
@@ -74,26 +69,20 @@ permalink: /about/
     
     踩着毕业的尾巴，跟小伙伴打的，费脑。
 
-
----
-    实习经历
-
-
-   下一个Boss可能就是你...
-
-
 ---
 	组会/讲课/TALK
 
-5.[组会-Feature selection](cellar/Ensemble.pdf)
+6.[组会-recent work](cellar/representation.pdf)
 
-4.[讲课-Ensemble](cellar/Ensemble.pdf)
+5.[讲课-Ensemble](cellar/Ensemble.pdf)
 
-3.[讲课-transfer](cellar/transfer.pdf)
+4.[讲课-transfer](cellar/transfer.pdf)
 
-2.[研讨班-Domain-Adaptive for detection](cellar/Domain-Adaptive.pdf)
+3.[研讨班-Domain-Adaptive for detection](cellar/Domain-Adaptive.pdf)
 
-1.[研讨班-two-stage objecte detection review](cellar/two-stage.pdf)
+2.[研讨班-two-stage objecte detection review](cellar/two-stage.pdf)
+
+1.[组会-Feature selection](cellar/Ensemble.pdf)
 
 ---
     联系方式
