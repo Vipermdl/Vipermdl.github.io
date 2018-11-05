@@ -97,7 +97,7 @@ softer-NMS缺点分析：
 
 2.论文提出的Softer-NMS,从本质上来说其实时对预测的检测框加权取平均，为什么要这么做？以及网络中输出的<a href="http://www.codecogs.com/eqnedit.php?latex=\sigma" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\sigma" title="\sigma" /></a>为什么就是我们数学推导中所需要的<a href="http://www.codecogs.com/eqnedit.php?latex=\sigma" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\sigma" title="\sigma" /></a>，并没有很好的理论依据。只是从实验上显示，softer-nms可以提升效果。
 
-**IOU-Net**
+**4.IOU-Net**
 
 IoU-Net 是旷视的另外一篇论文，是 ECCV2018 接收并做口头报告（清华和北大的学生在旷视实习时完成提交），和 Softer-NMS 一样，基于CNN的目标检测方法存在的分类置信度和定位置信度不匹配的问题。
 
