@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[DL]目标检测算法中检测框合并策略技术"
-excerpt: "参考sigai平台的检测框算法综述，针对nms、soft-nms、softer-nms进行总结。"
+title: "[DL]目标检测算法中检测框合并策略技术摘要"
+excerpt: "参考sigai平台的检测框算法综述，针对nms、soft-nms、softer-nms进行总结分析。"
 date: 2018-11-05 13:34:00
 mathjax: true
 ---
