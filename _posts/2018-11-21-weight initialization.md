@@ -11,7 +11,7 @@ mathjax: true
 近期在模型调参时发现，一个好的权重初始化方式以及随机种子，对模型的最终训练至关重要。因此，我整理关于DL中随机初始化策略并进行简要总结。
 
 <div style="color:#0000FF" align="center">
-<img src="../image/2018-11-21/bp.png" width="860" height="360" /> 
+<img src="/image/2018-11-21/bp.png" width="860" height="360" /> 
 </div>
 
 **1.Initializing all weights to 0**
@@ -43,7 +43,7 @@ a)使用ReLU、leaky ReLU作为激活函数。
 b)我们使用启发性初始化方式。
 
 <div style="color:#0000FF" align="center">
-<img src="../image/2018-11-21/in.png" width="860"/> 
+<img src="/image/2018-11-21/in.png" width="860"/> 
 </div>
 
 c)梯度截断
