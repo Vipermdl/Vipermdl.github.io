@@ -72,6 +72,8 @@ permalink: /about/
 ---
 	组会/讲课/TALK
 
+7.[研讨班-Rethinking Receptive Field Block Net](cellar/RFBNet-re.pdf)
+
 6.[组会-recent work](cellar/representation.pdf)
 
 5.[讲课-Ensemble](cellar/Ensemble.pdf)
