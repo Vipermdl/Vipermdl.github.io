@@ -71,6 +71,7 @@ permalink: /about/
 
 ---
 	组会/讲课/TALK
+    
 8.[研讨班-OCR sota of Pixel-anchor](cellar/ocr-sota-Pixel-anchor.pdf)
 
 7.[研讨班-Rethinking Receptive Field Block Net](cellar/RFBNet-re.pdf)
