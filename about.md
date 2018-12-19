@@ -71,7 +71,9 @@ permalink: /about/
 
 ---
 	组会/讲课/TALK
-    
+
+9.[研讨班-Grad-cam for weakly object detection](cellar/re-Grad-Cam.pdf)    
+
 8.[研讨班-OCR sota of Pixel-anchor](cellar/ocr-sota-Pixel-anchor.pdf)
 
 7.[研讨班-Rethinking Receptive Field Block Net](cellar/RFBNet-re.pdf)
