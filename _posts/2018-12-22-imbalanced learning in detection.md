@@ -1,10 +1,34 @@
 ---
 layout: post
-title: "[DL]关于样本的Hard和Easy的讨论"
-excerpt: "围绕CVPR2005，CVPR2016的两篇文章，hard negative mining, hard example mining, OHEM等，从prob和loss两个角度讨论，同时提了一些想法。"
-date: 2018-06-05 13:34:00
+title: "[DL]目标检测中样本不平衡问题的前世今生"
+excerpt: "围绕CVPR2016，CVPR2017，AAAI2019的三篇文章，OHEM、focal loss、 GHM等，从prob和loss两个角度讨论。"
+date: 2018-12-12 13:34:00
 mathjax: true
 ---
+
+**1.Introduction**
+
+我们知道object detection的算法主要可以分为两大类：two-stage detector和one-stage detector。前者是指类似Faster RCNN，RFCN这样需要region proposal的检测算法，这类算法可以达到很高的准确率，但是速度较慢。虽然可以通过减少proposal的数量或降低输入图像的分辨率等方式达到提速，但是速度并没有质的提升。后者是指类似YOLO，SSD这样不需要region proposal，直接回归的检测算法，这类算法速度很快，但是准确率不如前者。在object detection领域，一张图像可能生成成千上万的candidate locations，但是其中只有很少一部分是包含object的，这就带来了类别不均衡。另一方面，针对数据集样本的困难度，我们可以将图片划分为困难图片和容易图片，同样存在着样本不平衡问题（关于样本困难度阐述定义如下，定义引自GHM）：
+以二分类图片为例，我们通常采用cross-entropy:
+
+<img src="http://www.forkosh.com/mathtex.cgi? 在此处插入Latex公式">
+
+<img align="center" src="http://www.forkosh.com/mathtex.cgi? L _ { C E } \left( p , p ^ { * } \right) = \left\{ \begin{array} { l l } { - \log ( p ) } & { \text { if } p ^ { * } = 1 } \\ { - \log ( 1 - p ) } & { \text { if } p ^ { * } = 0 } \end{array} \right.">
+
+
+
+我们简要阐述三篇文章的动机并进行分析。
+
+**2.Online hard example mining(OHEM)**
+
+
+
+
+
+
+
+
+
 
 CVPR2005的文章《Histograms of Oriented Gradients for Human Detection》中，提到的Hard Negative Mining，过程是这样的，那个时候是HOG+SVM的光辉岁月。
 
