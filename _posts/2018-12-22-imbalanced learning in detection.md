@@ -8,10 +8,31 @@ mathjax: true
 
 **1.Introduction**
 
-我们知道object detection的算法主要可以分为两大类：two-stage detector和one-stage detector。前者是指类似Faster RCNN，RFCN这样需要region proposal的检测算法，这类算法可以达到很高的准确率，但是速度较慢。虽然可以通过减少proposal的数量或降低输入图像的分辨率等方式达到提速，但是速度并没有质的提升。后者是指类似YOLO，SSD这样不需要region proposal，直接回归的检测算法，这类算法速度很快，但是准确率不如前者。在object detection领域，一张图像可能生成成千上万的candidate locations，但是其中只有很少一部分是包含object的，这就带来了类别不均衡。另一方面，针对数据集样本的困难度，我们可以将图片划分为困难图片和容易图片，同样存在着样本不平衡问题（关于样本困难度阐述定义如下，定义引自GHM）：
-以二分类图片为例，我们通常采用cross-entropy:
+我们知道object detection的算法主要可以分为两大类：two-stage detector和one-stage detector。前者是指类似Faster RCNN，RFCN这样需要region proposal的检测算法，这类算法可以达到很高的准确率，但是速度较慢。虽然可以通过减少proposal的数量或降低输入图像的分辨率等方式达到提速，但是速度并没有质的提升。后者是指类似YOLO，SSD这样不需要region proposal，直接回归的检测算法，这类算法速度很快，但是准确率不如前者。在object detection领域，一张图像可能生成成千上万的candidate locations，但是其中只有很少一部分是包含object的，这就带来了类别不均衡。另一方面，针对数据集样本的困难度，我们可以将图片划分为困难图片和容易图片，同样存在着样本不平衡问题（关于样本困难度阐述定义如下，定义引自GHM）
+以二分类图片为例，对于候选框<a href="https://www.codecogs.com/eqnedit.php?latex=p\in&space;[0,1]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p\in&space;[0,1]" title="p\in [0,1]" /></a>为模型的预测概率，<a href="https://www.codecogs.com/eqnedit.php?latex=p&space;^&space;{&space;*&space;}\in&space;\left&space;\{&space;0,&space;\right&space;1\}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p&space;^&space;{&space;*&space;}\in&space;\left&space;\{&space;0,&space;\right&space;1\}" title="p ^ { * }\in \left \{ 0, \right 1\}" /></a>为样本的真实标签，则二分类loss如下：
 
+<div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;_&space;{&space;C&space;E&space;}&space;\left(&space;p&space;,&space;p&space;^&space;{&space;*&space;}&space;\right)&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;-&space;\log&space;(&space;p&space;)&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;1&space;}&space;\\&space;{&space;-&space;\log&space;(&space;1&space;-&space;p&space;)&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;0&space;}&space;\end{array}&space;\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;_&space;{&space;C&space;E&space;}&space;\left(&space;p&space;,&space;p&space;^&space;{&space;*&space;}&space;\right)&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;-&space;\log&space;(&space;p&space;)&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;1&space;}&space;\\&space;{&space;-&space;\log&space;(&space;1&space;-&space;p&space;)&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;0&space;}&space;\end{array}&space;\right." title="L _ { C E } \left( p , p ^ { * } \right) = \left\{ \begin{array} { l l } { - \log ( p ) } & { \text { if } p ^ { * } = 1 } \\ { - \log ( 1 - p ) } & { \text { if } p ^ { * } = 0 } \end{array} \right." /></a>
+</div>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=p=sigmoid(x)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p=sigmoid(x)" title="p=sigmoid(x)" /></a>，其中x为模型的直接输出，那么我们对x求导可得：
+
+<div style="color:#0000FF" align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=\frac&space;{&space;\partial&space;L&space;_&space;{&space;C&space;E&space;}&space;}&space;{&space;\partial&space;x&space;}&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;p&space;-&space;1&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;1&space;}&space;\\&space;{&space;p&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;0&space;}&space;\end{array}&space;\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac&space;{&space;\partial&space;L&space;_&space;{&space;C&space;E&space;}&space;}&space;{&space;\partial&space;x&space;}&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;p&space;-&space;1&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;1&space;}&space;\\&space;{&space;p&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;0&space;}&space;\end{array}&space;\right." title="\frac { \partial L _ { C E } } { \partial x } = \left\{ \begin{array} { l l } { p - 1 } & { \text { if } p ^ { * } = 1 } \\ { p } & { \text { if } p ^ { * } = 0 } \end{array} \right." /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex==p-p&space;^&space;{&space;*&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?=p-p&space;^&space;{&space;*&space;}" title="=p-p ^ { * }" /></a>
+</div>
+
+因此，我们定义g(gradient norm)如下所示：
+
+<div style="color:#0000FF" align="center">
+<a href="https://www.codecogs.com/eqnedit.php?latex=g&space;=&space;\left|&space;p&space;-&space;p&space;^&space;{&space;*&space;}&space;\right|&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;1&space;-&space;p&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;1&space;}&space;\\&space;{&space;p&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;0&space;}&space;\end{array}&space;\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?g&space;=&space;\left|&space;p&space;-&space;p&space;^&space;{&space;*&space;}&space;\right|&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;1&space;-&space;p&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;1&space;}&space;\\&space;{&space;p&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;0&space;}&space;\end{array}&space;\right." title="g = \left| p - p ^ { * } \right| = \left\{ \begin{array} { l l } { 1 - p } & { \text { if } p ^ { * } = 1 } \\ { p } & { \text { if } p ^ { * } = 0 } \end{array} \right." /></a>
+</div>
+
+当g趋向于1时，代表样本较为困难，模型难以预测及（number(false positive) + number(true negtive)）,当g趋向于0时，代表样本较为简单，模型预测较为容易。如下图所示（GHM图1），数据集中（我认为应该是coco）图片困难度同样存在一个样本不平衡问题：
+
+<div style="color:#0000FF" align="center">
+<img src="/image/2018-12-22/figure1.png" />
+</div>
 
 
 
