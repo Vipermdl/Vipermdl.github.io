@@ -19,6 +19,9 @@ mathjax: true
 
 <div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac&space;{&space;\partial&space;L&space;_&space;{&space;C&space;E&space;}&space;}&space;{&space;\partial&space;x&space;}&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;p&space;-&space;1&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;1&space;}&space;\\&space;{&space;p&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;0&space;}&space;\end{array}&space;\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac&space;{&space;\partial&space;L&space;_&space;{&space;C&space;E&space;}&space;}&space;{&space;\partial&space;x&space;}&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;p&space;-&space;1&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;1&space;}&space;\\&space;{&space;p&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;p&space;^&space;{&space;*&space;}&space;=&space;0&space;}&space;\end{array}&space;\right." title="\frac { \partial L _ { C E } } { \partial x } = \left\{ \begin{array} { l l } { p - 1 } & { \text { if } p ^ { * } = 1 } \\ { p } & { \text { if } p ^ { * } = 0 } \end{array} \right." /></a>
+</div>
+
+<div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex==p-p&space;^&space;{&space;*&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?=p-p&space;^&space;{&space;*&space;}" title="=p-p ^ { * }" /></a>
 </div>
 
@@ -41,7 +44,7 @@ two-stage detector 比one-stage效果好的最大原因是RPN的存在，这样�
 OHEM（online hard example miniing）算法的核心思想是根据输入样本的损失进行筛选，筛选出hard example，表示对分类和检测影响较大的样本，然后将筛选得到的这些样本应用在随机梯度下降中训练。在实际操作中是将原来的一个ROI Network扩充为两个ROI Network，这两个ROI Network共享参数。其中前面一个ROI Network只有前向操作，主要用于计算损失；后面一个ROI Network包括前向和后向操作，以hard example作为输入，计算损失并回传梯度。网络结构图如下所示：
 
 <div style="color:#0000FF" align="center">
-<img src="/image/2018-12-22/figure2.png" />
+<img src="/image/2018-12-22/figure2.png" width="600" />
 </div>
 
 算法优点：
@@ -73,6 +76,9 @@ OHEM（online hard example miniing）算法的核心思想是根据输入样本�
 
 <div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\delta&space;_&space;{&space;\epsilon&space;}&space;(&space;x&space;,&space;y&space;)&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;r&space;}&space;{&space;1&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;y&space;-&space;\frac&space;{&space;\epsilon&space;}&space;{&space;2&space;}&space;<&space;=&space;x&space;<&space;y&space;&plus;&space;\frac&space;{&space;\epsilon&space;}&space;{&space;2&space;}&space;}&space;\\&space;{&space;0&space;}&space;&&space;{&space;\text&space;{&space;otherwise&space;}&space;}&space;\end{array}&space;\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?\delta&space;_&space;{&space;\epsilon&space;}&space;(&space;x&space;,&space;y&space;)&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;r&space;}&space;{&space;1&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;y&space;-&space;\frac&space;{&space;\epsilon&space;}&space;{&space;2&space;}&space;<&space;=&space;x&space;<&space;y&space;&plus;&space;\frac&space;{&space;\epsilon&space;}&space;{&space;2&space;}&space;}&space;\\&space;{&space;0&space;}&space;&&space;{&space;\text&space;{&space;otherwise&space;}&space;}&space;\end{array}&space;\right." title="\delta _ { \epsilon } ( x , y ) = \left\{ \begin{array} { l r } { 1 } & { \text { if } y - \frac { \epsilon } { 2 } < = x < y + \frac { \epsilon } { 2 } } \\ { 0 } & { \text { otherwise } } \end{array} \right." /></a>
+</div>
+
+<div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=l&space;_&space;{&space;\epsilon&space;}&space;(&space;g&space;)&space;=&space;\min&space;\left(&space;g&space;&plus;&space;\frac&space;{&space;\epsilon&space;}&space;{&space;2&space;}&space;,&space;1&space;\right)&space;-&space;\max&space;\left(&space;g&space;-&space;\frac&space;{&space;\epsilon&space;}&space;{&space;2&space;}&space;,&space;0&space;\right)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?l&space;_&space;{&space;\epsilon&space;}&space;(&space;g&space;)&space;=&space;\min&space;\left(&space;g&space;&plus;&space;\frac&space;{&space;\epsilon&space;}&space;{&space;2&space;}&space;,&space;1&space;\right)&space;-&space;\max&space;\left(&space;g&space;-&space;\frac&space;{&space;\epsilon&space;}&space;{&space;2&space;}&space;,&space;0&space;\right)" title="l _ { \epsilon } ( g ) = \min \left( g + \frac { \epsilon } { 2 } , 1 \right) - \max \left( g - \frac { \epsilon } { 2 } , 0 \right)" /></a>
 </div>
 
@@ -112,6 +118,9 @@ GHM的思想同样适用于anchor的坐标回归。坐标回归loss常用smooth_
 
 <div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=L&space;_&space;{&space;r&space;e&space;g&space;}&space;=&space;\sum&space;_&space;{&space;i&space;\in&space;\{&space;x&space;,&space;y&space;,&space;w&space;,&space;h&space;\}&space;}&space;S&space;L&space;_&space;{&space;1&space;}&space;\left(&space;t&space;_&space;{&space;i&space;}&space;-&space;t&space;_&space;{&space;i&space;}&space;^&space;{&space;*&space;}&space;\right)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?L&space;_&space;{&space;r&space;e&space;g&space;}&space;=&space;\sum&space;_&space;{&space;i&space;\in&space;\{&space;x&space;,&space;y&space;,&space;w&space;,&space;h&space;\}&space;}&space;S&space;L&space;_&space;{&space;1&space;}&space;\left(&space;t&space;_&space;{&space;i&space;}&space;-&space;t&space;_&space;{&space;i&space;}&space;^&space;{&space;*&space;}&space;\right)" title="L _ { r e g } = \sum _ { i \in \{ x , y , w , h \} } S L _ { 1 } \left( t _ { i } - t _ { i } ^ { * } \right)" /></a>
+</div>
+
+<div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=S&space;L&space;_&space;{&space;1&space;}&space;(&space;d&space;)&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;\frac&space;{&space;d&space;^&space;{&space;2&space;}&space;}&space;{&space;2&space;\delta&space;}&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;|&space;d&space;|&space;<&space;=&space;\delta&space;}&space;\\&space;{&space;|&space;d&space;|&space;-&space;\frac&space;{&space;\delta&space;}&space;{&space;2&space;}&space;}&space;&&space;{&space;\text&space;{&space;otherwise&space;}&space;}&space;\end{array}&space;\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?S&space;L&space;_&space;{&space;1&space;}&space;(&space;d&space;)&space;=&space;\left\{&space;\begin{array}&space;{&space;l&space;l&space;}&space;{&space;\frac&space;{&space;d&space;^&space;{&space;2&space;}&space;}&space;{&space;2&space;\delta&space;}&space;}&space;&&space;{&space;\text&space;{&space;if&space;}&space;|&space;d&space;|&space;<&space;=&space;\delta&space;}&space;\\&space;{&space;|&space;d&space;|&space;-&space;\frac&space;{&space;\delta&space;}&space;{&space;2&space;}&space;}&space;&&space;{&space;\text&space;{&space;otherwise&space;}&space;}&space;\end{array}&space;\right." title="S L _ { 1 } ( d ) = \left\{ \begin{array} { l l } { \frac { d ^ { 2 } } { 2 \delta } } & { \text { if } | d | < = \delta } \\ { | d | - \frac { \delta } { 2 } } & { \text { otherwise } } \end{array} \right." /></a>
 </div>
 
@@ -125,6 +134,9 @@ GHM的思想同样适用于anchor的坐标回归。坐标回归loss常用smooth_
 
 <div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=A&space;S&space;L&space;_&space;{&space;1&space;}&space;(&space;d&space;)&space;=&space;\sqrt&space;{&space;d&space;^&space;{&space;2&space;}&space;&plus;&space;\mu&space;^&space;{&space;2&space;}&space;}&space;-&space;\mu" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;S&space;L&space;_&space;{&space;1&space;}&space;(&space;d&space;)&space;=&space;\sqrt&space;{&space;d&space;^&space;{&space;2&space;}&space;&plus;&space;\mu&space;^&space;{&space;2&space;}&space;}&space;-&space;\mu" title="A S L _ { 1 } ( d ) = \sqrt { d ^ { 2 } + \mu ^ { 2 } } - \mu" /></a>
+</div>
+
+<div style="color:#0000FF" align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac&space;{&space;\partial&space;A&space;S&space;L&space;_&space;{&space;1&space;}&space;}&space;{&space;\partial&space;d&space;}&space;=&space;\frac&space;{&space;d&space;}&space;{&space;\sqrt&space;{&space;d&space;^&space;{&space;2&space;}&space;&plus;&space;\mu&space;^&space;{&space;2&space;}&space;}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac&space;{&space;\partial&space;A&space;S&space;L&space;_&space;{&space;1&space;}&space;}&space;{&space;\partial&space;d&space;}&space;=&space;\frac&space;{&space;d&space;}&space;{&space;\sqrt&space;{&space;d&space;^&space;{&space;2&space;}&space;&plus;&space;\mu&space;^&space;{&space;2&space;}&space;}&space;}" title="\frac { \partial A S L _ { 1 } } { \partial d } = \frac { d } { \sqrt { d ^ { 2 } + \mu ^ { 2 } } }" /></a>
 </div>
 
