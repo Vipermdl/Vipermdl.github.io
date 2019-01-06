@@ -53,6 +53,8 @@ permalink: /about/
 ---
 	组会/讲课/TALK
 
+7.[研讨班-Sub-Pixel’s application and rethinking](cellar/Subpixel-cv.pdf)  
+
 6.[研讨班-Self-attention on computer vision](cellar/self-attention-on-computer-vison.pdf)   
 
 5.[研讨班-Grad-cam for weakly object detection](cellar/re-Grad-Cam.pdf)    
