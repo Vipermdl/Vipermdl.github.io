@@ -14,9 +14,9 @@ permalink: /about/
 ---
     研究方向:
 
-1. 表示学习、迁移学习
+- 1. 表示学习、迁移学习
 
-2. 目标检测与分割算法研究
+- 2. 目标检测与分割算法研究
 
 ---
     简介：
@@ -36,36 +36,36 @@ permalink: /about/
 ---
     比赛经历
 
-4. **天池比赛 — 2018广东工业智造大数据创新大赛—智能算法赛**
+- 4. **天池比赛 — 2018广东工业智造大数据创新大赛—智能算法赛**
 
     7/2972
 
-3. **2017中国大学生服务外包大赛——智能医疗——海马体分割**
+- 3. **2017中国大学生服务外包大赛——智能医疗——海马体分割**
 
     二等奖
 
-2.  **天池精准医疗大赛——人工智能辅助糖尿病遗传风险预测**
+- 2.  **天池精准医疗大赛——人工智能辅助糖尿病遗传风险预测**
 
     40/2522
 
-1. **内蒙古自治区ACM一等奖**
+- 1. **内蒙古自治区ACM一等奖**
     
 ---
 	组会/讲课/TALK
 
-7.[研讨班-Sub-Pixel’s application and rethinking](cellar/Subpixel-cv.pdf)  
+- 7.[研讨班-Sub-Pixel’s application and rethinking](cellar/Subpixel-cv.pdf)  
 
-6.[研讨班-Self-attention on computer vision](cellar/self-attention-on-computer-vison.pdf)   
+- 6.[研讨班-Self-attention on computer vision](cellar/self-attention-on-computer-vison.pdf)   
 
-5.[研讨班-Grad-cam for weakly object detection](cellar/re-Grad-Cam.pdf)    
+- 5.[研讨班-Grad-cam for weakly object detection](cellar/re-Grad-Cam.pdf)    
 
-4.[研讨班-OCR sota of Pixel-anchor](cellar/ocr-sota-Pixel-anchor.pdf)
+- 4.[研讨班-OCR sota of Pixel-anchor](cellar/ocr-sota-Pixel-anchor.pdf)
 
-3.[研讨班-Rethinking Receptive Field Block Net](cellar/RFBNet-re.pdf)
+- 3.[研讨班-Rethinking Receptive Field Block Net](cellar/RFBNet-re.pdf)
 
-2.[研讨班-Domain-Adaptive for detection](cellar/Domain-Adaptive.pdf)
+- 2.[研讨班-Domain-Adaptive for detection](cellar/Domain-Adaptive.pdf)
 
-1.[研讨班-two-stage objecte detection review](cellar/two-stage.pdf)
+- 1.[研讨班-two-stage objecte detection review](cellar/two-stage.pdf)
 
 ---
     联系方式
