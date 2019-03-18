@@ -41,7 +41,7 @@ mathjax: true
 注意：在将新网络替换到SSD框架上时，仍然最大程度保证实验的公平性。首先，用于检测的特征图在论文中保持38×38, 19×19, 10×10, 5×5, 3×3, 1×1的大小，并没有使用大的特征图；其次，保证每个用于检测的特征图的channel数目相同。
 
 <div style="color:#0000FF" align="center">
-<img src="/image/2019-03-18/root-resNet-18.png" width="860"/> 
+<img src="/image/2019-03-18/root-resnet-18.png" width="860"/> 
 </div>
 
 (a) 原ResNet-18: 结果为73.1% mAP。
