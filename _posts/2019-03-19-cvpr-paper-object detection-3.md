@@ -19,7 +19,7 @@ inference过程：
 检测分支输出score最高的100个框，再送入mask分支，得到mask结果，RoI feature map再和mask送入MaskIoU分支得到mask iou，与box的classification score相乘就得到最后的mask score。
 
 <div style="color:#0000FF" align="center">
-<img src="/image/2019-03-19/MS RCNN.png" width="860" height="360"/> 
+<img src="/image/2019-03-19/MS RCNN.png" width="860" height="430"/> 
 </div>
 
 总结：
@@ -30,7 +30,7 @@ inference过程：
 这篇论文提出了一种新的实例分割框架，设计了多任务多阶段的混合级联结构，并且融合了一个语义分割的分支来增强 spatial context。效果明显优于 Mask R-CNN 和 Cascade Mask R-CNN 的结果。
 
 <div style="color:#0000FF" align="center">
-<img src="/image/2019-03-19/HTC.png" width="860" height="360"/> 
+<img src="/image/2019-03-19/HTC.png" width="860" height="380"/> 
 </div>
 
 （1）由于 Cascade R-CNN 在物体检测上的结果非常好，论文首先尝试将 Cascade R-CNN 和 Mask R-CNN 直接进行杂交，得到子代 Cascade Mask R-CNN，如上图（a）所示。在这种实现里，每一个 stage 和 Mask R-CNN 相似，都有一个 mask 分支 和 box 分支。当前 stage 会接受 RPN 或者 上一个 stage 回归过的框作为输入，然后预测新的框和 mask。但是该种设计存在明显的问题，实验结果表明，主要在于 Cascade Mask R-CNN 相比 Mask R-CNN 在 box AP 上提高了 3.5 个点，但是在 mask AP 上只提高了 1.2 个点。
