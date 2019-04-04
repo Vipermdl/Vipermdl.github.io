@@ -6,7 +6,7 @@ date: 2019-03-19 15:34:00
 mathjax: true
 ---
 
-**Introduction**
+**1. Introduction**
 
 SSD主要有以下几个主要特点:
 
@@ -22,16 +22,10 @@ SSD主要有以下几个主要特点:
 
 当前，SSD的算法的鲁棒性较好，因此在工业界应用相对较多，同时基于SSD算法的改进也层出不穷，之前的cvpr2019中的ScratchDet就是在SSD上的改进，推荐一篇[SSD系列论文总结](https://zhuanlan.zhihu.com/p/35642094),总结的很棒。
 
-然而，SSD算法并不能直接应用于人脸检测领域。SSD算法受小目标检测性能较弱的影响，直接应用SSD算法并不能很好的解决人脸检测领域中小人脸问题。我曾使用SSD算法在WIDER Face数据集上进行训练，在FIDD数据集上测试，结果如下图所示：
-
-<div style="color:#0000FF" align="center">
-<img src="/image/2019-04-04/x.jpg" width="800" height="400"/> 
-</div>
-
-由此，我们简要总结针对SSD算法在人脸领域改进的两篇文章：S3FD、FaceBoxes。
+然而，SSD算法并不能直接应用于人脸检测领域。SSD算法受小目标检测性能较弱的影响，直接应用SSD算法并不能很好的解决人脸检测领域中小人脸问题。由此，我们简要总结针对SSD算法在人脸领域改进的两篇文章：S3FD、FaceBoxes。
 
 
-**FaceBoxes: A CPU Real-time Face Detector with High Accuracy**
+**2. FaceBoxes: A CPU Real-time Face Detector with High Accuracy**
 
 <div style="color:#0000FF" align="center">
 <img src="/image/2019-04-04/faceboxes.jpg" width="800"/> 
@@ -59,7 +53,7 @@ SSD主要有以下几个主要特点:
 
 针对SSD对小目标检测性能不好的原因，论文在Inception3 以及conv3_2两个检测分支分别增加anchor的密度，分别增加4倍和两倍。具体操作可以看代码，实现较为简单。
 
-**S3FD: Single Shot Scale-invariant Face Detector**
+**3. S3FD: Single Shot Scale-invariant Face Detector**
 
 这篇ICCV2017关于人脸检测的文章正是为了解决小尺寸人脸难以检测的问题。这篇文章的出发点是：当人脸尺寸比较小时，基于anchor的人脸检测算法效果下降明显，因此提出了不受人脸尺度变化影响的S3FD算法。具体内容如下：
 
@@ -86,7 +80,7 @@ SSD主要有以下几个主要特点:
 （3）引入max-out background label降低误检，摘自论文原话：“For each of the smallest anchors, we predict Nm scores for background label and then choose the highest as its final score, as illustrated in Fig. 4(b). Max-out operation integrates some local optimal solutions into our S3FD model so as to reduce the false positive rate of small faces.”。 通过引入不平衡样本分类方式来降低误检。
 
 
-**Reference**
+**4. Reference**
 
 1.[SSD：single shot multibox detector](https://arxiv.org/abs/1512.02325)
 
