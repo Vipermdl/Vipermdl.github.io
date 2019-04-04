@@ -28,7 +28,7 @@ SSD主要有以下几个主要特点:
 **2. FaceBoxes: A CPU Real-time Face Detector with High Accuracy**
 
 <div style="color:#0000FF" align="center">
-<img src="/image/2019-04-04/faceboxes.jpg" width="800"/> 
+<img src="/image/2019-04-04/faceboxes.jpg" width="750"/> 
 </div>
 
 主要贡献点：
