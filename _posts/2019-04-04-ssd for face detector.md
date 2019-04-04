@@ -8,7 +8,7 @@ mathjax: true
 
 **Introduction**
 
-SSD：single shot multibox detector 主要有以下几个主要特点:
+SSD主要有以下几个主要特点:
 
 1. 特征提取主干网络：VGG16，去除全连接层fc8，fc6 和 fc7层转换为卷积层，pool5不进行分辨率减小，在fc6上使用dilated convolution弥补损失的感受野；并且增加了一些分辨率递减的卷积层；
 
