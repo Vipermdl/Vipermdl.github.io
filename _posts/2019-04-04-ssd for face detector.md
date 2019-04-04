@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[Face detector]SSD算法在人脸检测领域的使用总结"
-excerpt: "针对S3FD、FaceBoxes三篇人脸检测论文进行总结以及整理"
+excerpt: "针对S3FD、FaceBoxes两篇人脸检测论文进行总结以及整理"
 date: 2019-03-19 15:34:00
 mathjax: true
 ---
