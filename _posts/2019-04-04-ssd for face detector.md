@@ -6,7 +6,7 @@ date: 2019-03-19 15:34:00
 mathjax: true
 ---
 
-**1.Introduction**
+**Introduction**
 
 SSD：single shot multibox detector 主要有以下几个主要特点:
 
@@ -31,7 +31,7 @@ SSD：single shot multibox detector 主要有以下几个主要特点:
 由此，我们简要总结针对SSD算法在人脸领域改进的两篇文章：S3FD、FaceBoxes。
 
 
-**2.FaceBoxes: A CPU Real-time Face Detector with High Accuracy**
+**FaceBoxes: A CPU Real-time Face Detector with High Accuracy**
 
 <div style="color:#0000FF" align="center">
 <img src="/image/2019-04-04/faceboxes.jpg" width="800"/> 
@@ -59,7 +59,7 @@ SSD：single shot multibox detector 主要有以下几个主要特点:
 
 针对SSD对小目标检测性能不好的原因，论文在Inception3 以及conv3_2两个检测分支分别增加anchor的密度，分别增加4倍和两倍。具体操作可以看代码，实现较为简单。
 
-**3.S3FD: Single Shot Scale-invariant Face Detector**
+**S3FD: Single Shot Scale-invariant Face Detector**
 
 这篇ICCV2017关于人脸检测的文章正是为了解决小尺寸人脸难以检测的问题。这篇文章的出发点是：当人脸尺寸比较小时，基于anchor的人脸检测算法效果下降明显，因此提出了不受人脸尺度变化影响的S3FD算法。具体内容如下：
 
