@@ -42,13 +42,17 @@ SSD：single shot multibox detector 主要有以下几个主要特点:
 1. Rapidly Digested Convolutional Layers(RDCL)
 
 （1）在网络前期，使用RDCL快速缩小feature map的大小。conv1,pool1,conv2,pool2的strdie分别是4，2，2和2。能够快速减小feature map大小，实现人脸检测的实时性。
+
 （2）卷积（或pooling）核太大速度就慢，太小覆盖信息又不足。文章权衡之后，将conv1,pool1,conv2,pool2的核大小分别设为7*7，3*3，5*5，3*3。
+
 （3）使用CReLU来保证输出维度不变的情况下，减少卷积核的数量。
 
 2. Multiple Scale Convolutional Layers(MSCL)
 
 在网络后期，使用MSCL更好地检测不同尺度的人脸。主要设计原则有：
+
 （1）类似于SSD，在网络的不同层进行检测；
+
 （2）采用inception模块。由于inception包含多个不同的卷积分支，因此可以进一步使得感受野多样化。
 
 3. Anchor densification strategy
