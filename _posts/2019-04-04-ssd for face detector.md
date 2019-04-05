@@ -10,19 +10,20 @@ mathjax: true
 
 SSD主要有以下几个主要特点:
 
-1. 特征提取主干网络：VGG16，去除全连接层fc8，fc6 和 fc7层转换为卷积层，pool5不进行分辨率减小，在fc6上使用dilated convolution弥补损失的感受野；并且增加了一些分辨率递减的卷积层；
+1.特征提取主干网络：VGG16，去除全连接层fc8，fc6 和 fc7层转换为卷积层，pool5不进行分辨率减小，在fc6上使用dilated convolution弥补损失的感受野；并且增加了一些分辨率递减的卷积层；
 
-2. SSD摈弃了proposal的生成阶段，使用anchor机制，这里的anchor就是位置和大小固定的box，可以理解成事先设置好的固定的proposal
+2.SSD摈弃了proposal的生成阶段，使用anchor机制，这里的anchor就是位置和大小固定的box，可以理解成事先设置好的固定的proposal
 
-3. SSD使用不同深度的卷积层预测不同大小的目标，对于小目标使用分辨率较大的较低层，即在低层特征图上设置较小的anchor，高层的特征图上设置较大anchor
+3.SSD使用不同深度的卷积层预测不同大小的目标，对于小目标使用分辨率较大的较低层，即在低层特征图上设置较小的anchor，高层的特征图上设置较大anchor
 
-4. 预测模块：使用3x3的卷积对每个anchor的类别和位置直接进行回归
+4.预测模块：使用3x3的卷积对每个anchor的类别和位置直接进行回归
 
-5. SSD使用的data augmentation对效果影响很大
+5.SSD使用的data augmentation对效果影响很大
 
 当前，SSD的算法的鲁棒性较好，因此在工业界应用相对较多，同时基于SSD算法的改进也层出不穷，之前的cvpr2019中的ScratchDet就是在SSD上的改进，推荐一篇[SSD系列论文总结](https://zhuanlan.zhihu.com/p/35642094),总结的很棒。
 
 然而，SSD算法并不能直接应用于人脸检测领域。SSD算法受小目标检测性能较弱的影响，直接应用SSD算法并不能很好的解决人脸检测领域中小人脸问题。由此，我们简要总结针对SSD算法在人脸领域改进的两篇文章：S3FD、FaceBoxes。
+
 
 
 **2. FaceBoxes: A CPU Real-time Face Detector with High Accuracy**
@@ -33,7 +34,7 @@ SSD主要有以下几个主要特点:
 
 主要贡献点：
 
-1. Rapidly Digested Convolutional Layers(RDCL)
+1.Rapidly Digested Convolutional Layers(RDCL)
 
 （1）在网络前期，使用RDCL快速缩小feature map的大小。conv1,pool1,conv2,pool2的strdie分别是4，2，2和2。能够快速减小feature map大小，实现人脸检测的实时性。
 
@@ -41,7 +42,7 @@ SSD主要有以下几个主要特点:
 
 （3）使用CReLU来保证输出维度不变的情况下，减少卷积核的数量。
 
-2. Multiple Scale Convolutional Layers(MSCL)
+2.Multiple Scale Convolutional Layers(MSCL)
 
 在网络后期，使用MSCL更好地检测不同尺度的人脸。主要设计原则有：
 
@@ -49,7 +50,7 @@ SSD主要有以下几个主要特点:
 
 （2）采用inception模块。由于inception包含多个不同的卷积分支，因此可以进一步使得感受野多样化。
 
-3. Anchor densification strategy
+3.Anchor densification strategy
 
 针对SSD对小目标检测性能不好的原因，论文在Inception3 以及conv3_2两个检测分支分别增加anchor的密度，分别增加4倍和两倍。具体操作可以看代码，实现较为简单。
 
