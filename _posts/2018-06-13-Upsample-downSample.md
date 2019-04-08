@@ -18,15 +18,17 @@ mathjax: true
 
 池化操作通过汇总局部区域的单个值（平均值或者最大值）下采样分辨率，而上池化操作通过将单个值分配给更高的分辨率对分辨率进行上采样。
 
-![Alt text1](/image/2018-06-13/unpooling.jpg)
-
+<div style="color:#0000FF" align="center">
+<img src="/image/2018-06-13/unpooling.jpg" width="750"/> 
+</div>
 
 2.Transpose conv
 
 转置卷积是最常用的方法，转置卷积又称为反卷积或上卷积，但他并不是卷积操作的逆过程。由于转置卷积允许我们开发学习过的上采样。卷积运算会将卷积核权重与当前值进行点积，并为相应输出位置产生单个值，转置卷积会先从低分辨率的特征映射中得到某个值，再用该值与卷积核中所有权重相乘，然后将这些加权值映射到输出特征图中。对在输出特征映射图中产生重叠的卷积核尺寸而言，重叠值是简单的叠加。不幸的是，这会在输出中产生棋盘效应，所以最好保证卷积核不会产生重叠.通常采用对低分辨率图片进行padding的方式，如下图：
 
-![Alt text2](/image/2018-06-13/padding_strides_transposed.gif)
-
+<div style="color:#0000FF" align="center">
+<img src="/image/2018-06-13/padding_strides_transposed.gif"/> 
+</div>
 
 3.Bilinear Upsampling
 
@@ -42,8 +44,9 @@ mathjax: true
 
 对特征映射进行下采样的一个好处是在给定常量卷积核尺寸的情况下扩展了感受野（对于输入）。由于大尺寸卷积核的参数效率较低，所以这种方法比增加卷积核尺寸更加合理。然而，这种扩展的代价是降低了空间分别率。扩张卷积提供了另外一种在保留完整空间维度的同时还能获得广泛视野的方法。如下图，扩张卷积根据指定的扩张率（dilateion rate）用值将空间间隔开。
 
-![Alt text3](/image/2018-06-13/dilation.gif)
-
+<div style="color:#0000FF" align="center">
+<img src="/image/2018-06-13/dilation.gif"/> 
+</div>
 
 **想法及总结**
 
