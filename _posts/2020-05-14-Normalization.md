@@ -97,7 +97,7 @@ GN作为LN的特例，在通道上进行分组，以减少LN的计算量：
 
 **6.IN-place ABN**
 
-在先进的网络中，大多数神经网络重复使用BN+激活层组合，而现有的深度学习框架对此的内存优化策略不佳，因此，采用In-aplace ABN层代替BN+激活层，通过存储少量的计算结果（丢弃部分中间结果，在反向传播时倒置计算恢复需要的参数），节省存储空间，少量的增加计算量（以时间换空间的策略）。具体内容讲解见[网络优化-- (INPLACE-ABN)In-Place Activated BatchNorm for Memory-Optimized Training of DNNs](https://blog.csdn.net/u011974639/article/details/79545363)
+在先进的网络中，大多数神经网络重复使用BN+激活层组合，而现有的深度学习框架对此的内存优化策略不佳，因此，采用In-aplace ABN层代替BN+激活层，通过存储少量的计算结果（丢弃部分中间结果，在反向传播时倒置计算恢复需要的参数），节省存储空间，少量的增加计算量（以时间换空间的策略）。具体内容讲解见[网络优化-- (INPLACE-ABN)In-Place Activated BatchNorm for Memory-Optimized Training of DNNs](https://blog.csdn.net/u011974639/article/details/79545363)。
 
 **7. 参考文献**
 
