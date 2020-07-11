@@ -26,7 +26,7 @@ V1的主要贡献点就是提出了现阶段大多数轻量级神经网络中采
 
 逐点卷积：就是1x1卷积。主要作用就是对特征图进行升维和降维。
 
-因此，MobileNet V1 将标准卷积做了如下替换,此处的ReLU6为ReLu的改进，作者认为ReLu6在低精度计算下具有更强的鲁棒性。其中：<a href="https://www.codecogs.com/eqnedit.php?latex=ReLU6\left&space;(&space;x&space;\right&space;)=min\left&space;(&space;max\left&space;(0,\right&space;x),&space;\right&space;6)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?ReLU6\left&space;(&space;x&space;\right&space;)=min\left&space;(&space;max\left&space;(0,\right&space;x),&space;\right&space;6)" title="ReLU6\left ( x \right )=min\left ( max\left (0,\right x), \right 6)" /></a>：
+因此，MobileNet V1 将标准卷积做了如下替换,此处的ReLU6为ReLu的改进，作者认为ReLu6在低精度计算下具有更强的鲁棒性。其中：<a href="https://www.codecogs.com/eqnedit.php?latex=ReLu6(x)&space;=&space;min(max(0,x),6)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?ReLu6(x)&space;=&space;min(max(0,x),6)" title="ReLu6(x) = min(max(0,x),6)" /></a>：
 
 <div style="color:#0000FF" align="center">
 <img src="/image/2019-07-26/unit.jpg"/>
