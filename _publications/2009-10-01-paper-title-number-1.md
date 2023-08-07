@@ -1,6 +1,6 @@
 ---
 title: "A Light-Weight Context-Aware Self-Attention Model for Skin Lesion Segmentation"
-collection: publications
+collection: Conference
 permalink: /publication/2009-10-01-paper-title-number-1
 excerpt: 'Skin Lesion; Light-Weight; ISBI 2017 dataset.'
 date: 2019-08-23
