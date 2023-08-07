@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : &dongliangma1
 facebook:
   username               :
   app_id                 :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "dongliangma1"
+  twitter          : "https://twitter.com/dongliangma1"
   vine             :
   weibo            :
   xing             :
