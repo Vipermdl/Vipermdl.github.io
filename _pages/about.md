@@ -1,50 +1,75 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
-excerpt: "About me"
+title: ""
+excerpt: ""
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+{% if site.google_scholar_stats_use_cdn %}
+{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
+{% else %}
+{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
+{% endif %}
+{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+<span class='anchor' id='about-me'></span>
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+I am currently a PhD candidate at Institute of Information Engineering, Chinese Academy of Sciences. I received my Bachelor's degree from Peking University in 2018 and my Master's degree from Institute of Information Engineering, Chinese Academy of Sciences in 2021, supervised by [Prof. Jizhong Han](https://people.ucas.ac.cn/~hjz). I was also co-supervised by [Prof. Si Liu](https://scholar.google.com/citations?user=-QtVtNEAAAAJ) leading the [ColaLab](https://www.colalab.net/) at Beihang University from 2018 to now. I have published more than 15 papers in cutting-edge international conferences and journals, including TPAMI, TIP, CVPR, ECCV, ACM MM, etc. I have been awarded the Excellent Prize of President Scholarship for Postgraduate Students of Chinese Academy of Sciences and the China National Scholarship in 2020. I have worked as a research intern at SenseTime and Meituan, and have been a reviewer for top conferences and journals. My research interest includes autonomous driving and multimedia analysis, focusing on multimodal visual segmentation and detection.
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+# 🔥 News
+- *2025.03*: &nbsp;🎉🎉 We are holding a workshop at ACM MM 2025 on Aerial-view Imaging. [Call for papers](https://www.zdzheng.xyz/ACMMM2025Workshop-UAV/).
+- *2025.03*: &nbsp;🎉🎉 Two papers are accepted by CVPR 2025.
+- *2024.12*: &nbsp;🎉🎉 One paper is accepted by AAAI 2025.
+- *2024.11*: &nbsp;🎉🎉 One paper is accepted by TPAMI 2025.
+- *2024.07*: &nbsp;🎉🎉 One paper is accepted by CVIU 2024.
+- *2024.06*: &nbsp;🎉🎉 One paper is accepted by MICCAI 2024.
+- *2024.02*: &nbsp;🎉🎉 One paper is accepted by CVPR 2024.
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+# 📝 Selected Publications (\* Equal Contribution, \# Corresponding Author)
+Revisiting Audio-Visual Segmentation with Vision-Centric Transformer. **Shaofei Huang**, Rui Ling, Tianrui Hui, Hongyu Li, Xu Zhou, Shifeng Zhang, Si Liu, Richang Hong, Meng Wang. CVPR 2025.
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+[LLaVA-ST: A Multimodal Large Language Model for Fine-Grained Spatial-Temporal Understanding](https://arxiv.org/abs/2501.08282). Hongyu Li, Jinyu Chen, Ziyu Wei, **Shaofei Huang**, Tianrui Hui, Jialin Gao, Xiaoming Wei, Si Liu. CVPR 2025.
 
-**Markdown generator**
+[Unleashing the Temporal-Spatial Reasoning Capacity of GPT for Training-Free Audio and Language Referenced Video Object Segmentation](https://arxiv.org/pdf/2408.15876). **Shaofei Huang\***, Rui Ling\*, Hongyu Li\*, Tianrui Hui, Zongheng Tang, Xiaoming Wei, Jizhong Han, Si Liu. AAAI 2025.
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+[Anchor3DLane++: 3D Lane Detection Via Sample-Adaptive Sparse 3D Anchor Regression](https://ieeexplore.ieee.org/document/10771714). **Shaofei Huang**, Zhenwei Shen, Zehao Huang, Yue Liao, Jizhong Han, Naiyan Wang, Si Liu. TPAMI 2025.
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+[Modality adaptation via feature difference learning for depth human parsing](https://www.sciencedirect.com/science/article/pii/S1077314224001516). **Shaofei Huang**, Tianrui Hui, Yue Gong, Fengguang Peng, Yuqiang Fang, Jingwei Wang, Bin Ma, Xiaoming Wei, Jizhong Han. CVIU 2024.
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+[Mask-Enhanced Segment Anything Model for Tumor Lesion Semantic Segmentation](https://arxiv.org/pdf/2403.05912). Hairong Shi, Songhao Han, **Shaofei Huang\#**, Yue Liao, Guanbin Li\#, Xiangxing Kong, Hua Zhu, Xiaomu Wang, Si Liu. MICCAI 2024.
 
-For more info
-------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+[Customize your NeRF: Adaptive Source Driven 3D Scene Editing via Local-Global Iterative Training](https://arxiv.org/pdf/2312.01663). Runze He\*, **Shaofei Huang\***, Xuecheng Nie, Tianrui Hui, Luoqi Liu, Jiao Dai, Jizhong Han, Guanbin Li, Si Liu. CVPR 2024.
+
+[Transferring CLIP's Knowledge into Zero-Shot Point Cloud Semantic Segmentation](https://arxiv.org/pdf/2312.07221). Yuanbin Wang, **Shaofei Huang\#**, Yulu Gao, Zhen Wang, Rui Wang, Kehua Sheng, Bo Zhang, Si Liu. ACM MM 2023.
+
+[Discovering Sounding Objects by Audio Queries for Audio Visual Segmentation](https://arxiv.org/pdf/2309.09501). **Shaofei Huang\***, Han Li\*, Yuqing Wang, Hongji Zhu, Jiao Dai, Jizhong Han, Wenge Rong, Si Liu. IJCAI 2023.
+
+[Anchor3DLane: Learning to Regress 3D Anchors for Monocular 3D Lane Detection](https://arxiv.org/pdf/2301.02371). **Shaofei Huang**, Zhenwei Shen, Zehao Huang, Zi-han Ding, Jiao Dai, Jizhong Han, Naiyan Wang, Si Liu. CVPR 2023.
+
+[Language-Aware Spatial-Temporal Collaboration for Referring Video Segmentation](https://ieeexplore.ieee.org/document/10013778). Tianrui Hui, Si Liu, Zihan Ding, **Shaofei Huang**, Guanbin Li, Wenguan Wang, Luoqi Liu, Jizhong Han. TPAMI 2023.
+
+[Cross-Modal Progressive Comprehension for Referring Segmentation](https://arxiv.org/pdf/2105.07175). Si Liu, Tianrui Hui, **Shaofei Huang**, Yunchao Wei, Bo Li, Guanbin Li. TPAMI 2022.
+
+[Cross-Modality Domain Adaptation for Freespace Detection: A Simple yet Effective Baseline](https://arxiv.org/pdf/2210.02991). Yuanbin Wang, Leyan Zhu, **Shaofei Huang\#**, Tianrui Hui, Xiaojie Li, Fei Wang, Si Liu. ACM MM 2022.
+
+[A Keypoint-based Global Association Network for Lane Detection](https://arxiv.org/pdf/2204.07335). Jinsheng Wang\*, Yinchao Ma\*, **Shaofei Huang\***, Tianrui Hui, Fei Wang, Chen Qian, Tianzhu Zhang. CVPR 2022.
+
+[Collaborative Spatial-Temporal Modeling for Language-Queried Video Actor Segmentation](https://arxiv.org/pdf/2105.06818). Tianrui Hui\*, **Shaofei Huang\***, Si Liu, Zihan Ding, Guanbin Li, Wenguan Wang, Jizhong Han, Fei Wang. CVPR 2021.
+
+[ORDNet: Capturing Omni-Range Dependencies for Scene Parsing](https://arxiv.org/pdf/2101.03929). **Shaofei Huang**, Si Liu, Tianrui Hui, Jizhong Han, Bo Li, Jiashi Feng, Shuicheng Yan. TIP 2020.
+
+[Referring Image Segmentation via Cross-Modal Progressive Comprehension](https://arxiv.org/pdf/2010.00514). **Shaofei Huang\***, Tianrui Hui\*, Si Liu, Guanbin Li, Yunchao Wei, Jizhong Han, Luoqi Liu, Bo Li. CVPR 2020.
+
+# 🎖 Honors and Awards
+- *2024.06* Outstanding Student of University of Chinese Academy of Sciences.
+- *2020.12* China National Scholarship.
+- *2020.07* Excellent Prize of President Scholarship for Postgraduate Students of Chinese Academy of Sciences.
+
+# 📖 Educations and Working
+- *2022.09 - 2025.06 (Expected)*, PhD, Institute of Information Engineering, Chinese Academy of Sciences, Beijing.
+- *2021.06 - 2022.07*, Algorithm Researcher (AI Pioneers), SenseTime Technology Co. Ltd, Beijing.
+- *2018.09 - 2021.06*, MEng, Institute of Information Engineering, Chinese Academy of Sciences, Beijing.
+- *2014.09 - 2018.07*, BS, School of Electronics Engineering and Computer Science, Peking University, Beijing.
