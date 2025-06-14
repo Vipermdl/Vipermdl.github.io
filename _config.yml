@@ -22,7 +22,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Dongliang Ma (马栋梁)"
-  avatar           : "images/android-chrome-512x512.png"
+  avatar           : "images/android-chrome-512x512.jpg"
   bio              : "School of Geographic Sciences, East China Normal University"
   location         : "Shanghai, China"
   employer         :
