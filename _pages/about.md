@@ -59,9 +59,9 @@ I am currently a PhD candidate at Key Laboratory of Geographic Information Scien
 
 # 🎖 Honors and Awards
 - *2019.06* Freesound Audio Tagging 2019 (Kaggle Gold Medal 1% 2/880).
-- *2018.12* 2018 Guangdong Industrial Intelligent Manufacturing Big Data Innovation Competition (1% 7/2972).
-- *2017.12* 2017 China College Student Service Outsourcing Competition - Hippocampus Segmentation (Second Prize).
-- *2017.07* 2017 Artificial Intelligence - Assisted Diabetes Risk Prediction (3% 75/2522).
+- *2018.12* Guangdong Industrial Intelligent Manufacturing Big Data Innovation Competition (1% 7/2972).
+- *2017.12* China College Student Service Outsourcing Competition - Hippocampus Segmentation (Second Prize).
+- *2017.07* Artificial Intelligence - Assisted Diabetes Risk Prediction (3% 75/2522).
 - *2017.04* The 12th Inner Mongolia Autonomous Region College Student Programming Competition (First Prize).
 
 # 📖 Educations and Working
