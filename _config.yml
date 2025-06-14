@@ -6,9 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Shaofei Huang"
-description              : "PhD candidate at Institute of Information Engineering, Chinese Academy of Sciences. Research interests include autonomous driving and multimedia analysis."
-repository               : "spyflying/spyflying.github.io"
+title                    : "Dongliang Ma"
+description              : "PhD candidate at Key Laboratory of Geographic Information Science, Ministry of Education, School of Geographic Sciences, East China Normal University. Research interests include autonomous driving and computer vision."
+repository               : "vipermdl/vipermdl.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
@@ -21,14 +21,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Shaofei Huang (黄少飞)"
+  name             : "Dongliang Ma (马栋梁)"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Institute of Information Engineering, Chinese Academy of Sciences"
-  location         : "Beijing, China"
+  bio              : "School of Geographic Sciences, East China Normal University"
+  location         : "Shanghai, China"
   employer         :
   pubmed           :
-  googlescholar    : "https://scholar.google.com/citations?user=hVbSuo0AAAAJ"
-  email            : "nowherespyfly@gmail.com"
+  googlescholar    : "https://scholar.google.com/citations?user=dCFvdvYAAAAJ"
+  email            : "mdl.viper@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
